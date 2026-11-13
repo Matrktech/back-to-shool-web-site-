@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #fafaf8;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f3f2f8;
+  --color-ink: #181622;
+  --color-ink-muted: #5c586e;
+  --color-border-hairline: #e6e4ee;
+  --color-accent: #6d3df5;
+  --color-accent-hover: #5829d8;
+  --color-accent-soft: #efeafd;
+  --color-warm-amber: #f59e0b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle notebook graph-paper background for Hero stage */
+.bg-notebook-grid {
+  background-image:
+    linear-gradient(to right, rgba(109, 61, 245, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 61, 245, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Subtle ruled notebook horizontal lines */
+.bg-ruled-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 31px,
+    rgba(109, 61, 245, 0.055) 31px,
+    rgba(109, 61, 245, 0.055) 32px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

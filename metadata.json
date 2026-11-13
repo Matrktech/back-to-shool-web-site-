@@ -1,0 +1,6 @@
+{
+  "name": "ScholarPack",
+  "description": "Interactive Back to School shopping experience featuring a responsive cartoon schoolbag companion, curated school essentials, live shopping cart, and store support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
